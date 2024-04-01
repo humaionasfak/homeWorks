@@ -1,0 +1,146 @@
+/*
+Theme Name: Aytor;
+Version:1.0.0;
+Author:
+Author URI: 
+Tag: 
+Description
+
+
+
+table of contents
+========================
+**** common section ****
+1)header section 
+    1.1)Top Bar
+    1.2)Nav Bar
+**** home page ****
+
+*/
+/***** common Section *****/  
+:root {
+	--1st-primary-light: #ff6f61;
+	--2nd-primary-color-dark: #ff5645;
+	--hover-color: #151a32;
+	--text-color: #11161e;
+	--comon-colot: #fff;
+	--paragraph-color: #444;
+	--background-color: #f1f1f1;
+	--bg: #f1f3f4;
+	--black: #000;
+	--a6aab7: #a6aab7;
+    /* font  */
+    --font-family: "Josefin Sans", sans-serif;
+    --second-family: "Roboto", sans-serif
+}
+body{
+    font-family: "Roboto", sans-serif;
+}
+h1,h2, h3 , h4, h5, h6 ,a, button{
+    font-family: var(--font-family);
+}
+/***** common Section End *****/
+/*===============================>
+#Tob Bar start
+===============================>*/
+#tob_bar{
+    background: var(--hover-color);
+    color: var(--comon-colot);
+    padding: 11px 0;
+}
+#tob_bar  .top_bar_start p{
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 175%;
+    color: var(--comon-colot)
+}
+#tob_bar  .top_bar_start p span{
+    line-height: 162%;
+    color: var(--1st-primary-light);
+}
+#tob_bar  .top_bar_start p i{
+    color: var(--1st-primary-light);
+    padding-right: 8px;
+}
+
+#tob_bar .top_bar_end ul li a{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 175%;
+    color: var(--comon-colot);
+    font-family: var(--second-family);
+}
+#tob_bar .top_bar_end ul.settings li{
+    border-right: 1px solid var(--paragraph-color);
+    padding: 0 20px;
+}
+#tob_bar .top_bar_end ul li select{
+    background: none;
+    border: none;
+    color: var(--comon-colot);
+}
+#tob_bar .top_bar_end ul li select option{
+    background: var(--paragraph-color);
+    color: var(--bg)
+}
+#tob_bar .top_bar_end ul.social_icon{
+    margin-left: 20px;
+}
+#tob_bar .top_bar_end ul.social_icon li{
+    margin-left: 10px;
+}
+#tob_bar .top_bar_end ul.social_icon li a{
+    transition: 0.2s;
+}
+#tob_bar .top_bar_end ul.social_icon li a:hover{
+    color: var(--1st-primary-light);
+}
+/*===============================>
+#Top Bar end
+===============================>*/
+/*===============================>
+#navbar start
+===============================>*/
+#nav .link_and_icon ul.nav_link li a {
+    padding: 0 15px ;
+    display: inline-block;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 162%;
+    color: var(--text-color);
+    transition: 0.2s;
+}
+#nav .link_and_icon ul.nav_link li a:hover{
+    color: var(--1st-primary-light);
+}
+#nav .link_and_icon .nav_social_icon li a i{
+    font-size: 20px;
+    color: var(--text-color);
+    margin: 0 10px;
+
+}
+#nav .link_and_icon .nav_social_icon li:nth-child(4){
+    /* color: red; */
+    position: relative;
+}
+
+#nav .link_and_icon .nav_social_icon li div{
+    background: var(--1st-primary-light);
+    position: absolute;
+    right:0px;
+    top: -6px;
+    /* font-size: 15px; */
+    line-height: 15px;
+    text-align: center;
+    width: 15px;
+    height: 15px;
+    color: var(--comon-colot);
+    border-radius: 50%;
+
+
+}
+/*===============================>
+#navbar end
+===============================>*/
+

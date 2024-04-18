@@ -18,6 +18,8 @@
     
     <!-- bootstrap link -->
     <link rel="stylesheet" href="./assets/vandor/css/bootstrap.min.css">
+    <!-- slick link  -->
+    <link rel="stylesheet" href="./assets/vandor/css/slick.css">
     <!-- google font  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -89,27 +91,265 @@
                             <li><a href="">Blogs</a></li>
                             <li><a href="">Contact</a></li>
                         </ul>
+
+
+                        
                         <ul class="d-flex nav_social_icon">
-                            <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
-                            <li><a href="#"><i class="fa-regular fa-user"></i></a></li>
+                            <li><a href="#" id="sharch"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                            <li><a href="#" ><i class="fa-regular fa-user"></i></a></li>
                             <li><a href="#"><i class="fa-regular fa-heart"></i></a></li>
                             <li>
                                 <div>0</div>
-                                <a href="#">
-                                    <i class="fa-solid fa-bag-shopping"></i>
+                                <a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                                    <i class="fa-solid fa-bag-shopping "></i>
                                 </a>
                             </li>
                         </ul>
                     </div>
-                  </div>
-                </nav>
+                </div>
+            </nav>
+            <div class="overlab">
+                <div class="main_overlab">
+
+                    <button id="cencle_btn"><i class="fa-regular fa-circle-xmark"></i></button>
+                    <input id="input" type="search">
+                </div>
+              
+            </div>
+<!-- ========== offcanvas Section ========== -->
+
+
+
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel"  >
+            <div class="offcanvas-header">
+             <h5 id="offcanvasRightLabel">Offcanvas right</h5>
+         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+            <div class="offcanvas-body">
+    ...
+            </div>
+<       /div>
+<!-- ========== offcanvas Section end ========== -->
                 <!-- ==========   Nav Bar End ========== -->
         </header>
         <!-- ==========  header section End ========== -->
+        <!-- ========== main Start Section ========== -->
+        <main id="main" class="d-none d-lg-block">
+            <div class="banner_slider">
+                <div class="slide" style="background: url(./assets/img/banner.jpg);">
+                    <div class="container h-100 ">
+                        <div class="row h-100 align-items-center">
+                            <div class="content">
+                                <h5>Mega Sale</h5>
+                                <h1>Up To 35% Off</h1>
+                                <p class="col-lg-4">Objectively incubate enabled innovation through leveraged mindshare. Competently.</p>
+                                <a href="">Shop Now <i class="fa-solid fa-arrow-right"></i> </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide" style="background: url(./assets/img/nasa-hubble-space-telescope-Mq5hiqZ4_HQ-unsplash.jpg);">
+                    <div class="container h-100 ">
+                        <div class="row h-100 align-items-center">
+                            <div class="content">
+                                <h5 style="color: #fff";>Mega Sale</h5>
+                                <h1 style="color: #fff" >Up To 35% Off</h1>
+                                <p style="color: #fff" class="col-lg-4">Objectively incubate enabled innovation through leveraged mindshare. Competently.</p>
+                                <a href="">Shop Now <i class="fa-solid fa-arrow-right"></i> </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="slide" style="background: url(./assets/img/brof.jpg);">
+                    <div class="container h-100 ">
+                        <div class="row h-100 align-items-center">
+                            <div class="content">
+                                <h5 ">Mega Sale</h5>
+                                <h1>Up To 35% Off</h1>
+                                <p class="col-lg-4">Objectively incubate enabled innovation through leveraged mindshare. Competently.</p>
+                                <a href="">Shop Now <i class="fa-solid fa-arrow-right"></i> </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="left_arrows">
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+            <div class="right_arrows">
+                <i class="fa-solid fa-arrow-left-long"></i>
+            </div>
+        </div>
+        </main>
+        <!-- ========== responsive Section start ========== -->
+        <section id="small_device" class="d-lg-none d-block">
+            <div class="sm_banner_slider">
+                <div class="slide">
+                    <a href="#">
+                        <img src="./assets/img/smBanner.jpg" class="d-block w-100" alt="">
+                    </a>
+                </div>
+                <div class="slide">
+                    <a href="#">
+                        <img src="./assets/img/smBanner.jpg" class="d-block w-100" alt="">
+                    </a>
+                </div>
+                <div class="slide">
+                    <a href="#">
+                        <img src="./assets/img/smBanner.jpg" class="d-block w-100" alt="">
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- ========== End Section responsive ========== -->
+        
+        <!-- ========== main End Section ========== -->
+        
+        
+
+        <!-- ========== Start Section footer ========== -->
+        <footer>
+            <div class="container">
+                <div class="footer_header_section row">
+                    <div class="col-lg-3 d-flex gap-3 align-items-center child col-md-6 col-sm-12 mt-md-5 mt-3">
+                        <div class="f_icon">
+                            <img src="./assets/img/delivery-truck 1 (Traced).png" alt="">
+                        </div>
+                        <div class="f-text">
+                            <h3>FREE SHIPING</h3>
+                            <p>all orders over <span> $150</span></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 d-flex gap-3 align-items-center child col-md-6 col-sm-12 mt-md-5 mt-3">
+                        <div class="f_icon">
+                            <img src="./assets/img/credit-card 1 (Traced).png" alt="">
+                        </div>
+                        <div class="f-text">
+                            <h3>FREE SHIPING</h3>
+                            <p>all orders over <span> $150</span></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 d-flex gap-3 align-items-center child col-md-6 col-sm-12 mt-md-5 mt-3 ">
+                        <div class="f_icon">
+                            <img src="./assets/img/exchange 1 (Traced).png" alt="">
+                        </div>
+                        <div class="f-text">
+                            <h3>FREE SHIPING</h3>
+                            <p>all orders over <span> $150</span></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 d-flex gap-3 align-items-center child col-md-6 col-sm-12 mt-md-5 mt-3 border-0">
+                        <div class="f_icon">
+                            <img src="./assets/img/customer-service 1 (Traced).png" alt="">
+                        </div>
+                        <div class="f-text">
+                            <h3>FREE SHIPING</h3>
+                            <p>all orders over <span> $150</span></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- ==========/////////// footer center section  \\\\\\========== -->
+                <div class="footer_center_section">
+                    <div class="row justify-content-center align-content-center   ">
+                        <div class="col-lg-4 text-lg-start card_one row gap-3 col-12  text-center justify-content-center  mt-md-5 mt-sm-5">
+                            <div class="icon">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </div>
+                            <div class="icon">
+                                <i class="fa-brands fa-twitter"></i>
+                            </div>
+                            <div class="icon">
+                                <i class="fa-brands fa-instagram"></i>
+                            </div>
+                            <div class="icon">
+                                <i class="fa-brands fa-pinterest-p"></i>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 text-lg-center col-12 text-center mt-md-5 mt-sm-5">
+                            <img src="./assets/img/Logo.png" alt="">
+                        </div>
+                        <div class="col-lg-4 text-lg-end col-12  text-center mt-md-5 mt-sm-5 ">
+                            <img src="./assets/img/all card.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <!-- ==========///////////footer end section  \\\\\\========== -->
+                <div class="footer_end_section">
+                    <div class="row">
+                        <div class="col-lg-2 col-md-4 mt-md-4 mt-sm-5">
+                            <h2>My Account</h2>
+                            <div class="content_footer">
+                                <p> <i class="fa-solid fa-chevron-right"></i>My Account</p>
+                                <P> <i class="fa-solid fa-chevron-right"></i>View Cart</P>
+                                <P> <i class="fa-solid fa-chevron-right"></i>Wishlist</P>
+                                <P> <i class="fa-solid fa-chevron-right"></i>Compare</P>
+                                <P> <i class="fa-solid fa-chevron-right"></i>New Products</P>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-4 mt-md-4 mt-sm-5">
+                            <h2>Support</h2>
+                            <div class="content_footer">
+                                <p> <i class="fa-solid fa-chevron-right"></i>Help</p>
+                                <P> <i class="fa-solid fa-chevron-right"></i>Contact Us</P>
+                                <P> <i class="fa-solid fa-chevron-right"></i>Feedback</P>
+                                <P> <i class="fa-solid fa-chevron-right"></i>Customer Service</P>
+                                <P> <i class="fa-solid fa-chevron-right"></i>Store Locations</P>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-4 mt-md-4 mt-sm-5">
+                            <h2>Opening Time</h2>
+                            <div class="content_footer">
+                                <p> <i class="fa-solid fa-chevron-right"></i>Mon - Tue:    8AM - 10PM</p>
+                                <P> <i class="fa-solid fa-chevron-right"></i>Wed:              8AM - 7PM</P>
+                                <P> <i class="fa-solid fa-chevron-right"></i>Fri:                 7AM - 12PM</P>
+                                <P> <i class="fa-solid fa-chevron-right"></i>Sat:                9AM - 8PM</P>
+                                <P> <i class="fa-solid fa-chevron-right"></i>Sun:               Closed</P>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mt-md-4 mt-sm-5">
+                            <h2>Contact Us</h2>
+                            <div class="content_footer">
+                                <p> <i class="fa-solid fa-location-dot" style="color: #ff6f61;"></i></i>830 Broad way, New York, NY 10003,
+                                    United States</p>
+                                <p> <i class="fa-solid fa-phone" style="color: #ff6f61;"></i>></i>+18008660286</p>
+                                <p> <i class="fa-regular fa-envelope" style="color: #ff6f61;"></i>aetor.info@gmail.com</p>
+                                <p>info@aetor.com</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mt-md-4 mt-sm-5">
+                            <h2>News Letter</h2>
+                            <div class="content_footer">
+                                <p>Authoritatively morph 24/7 potentialities with error-free partnerships.</p>
+                            </div>
+                            <div class="input row">
+                                <input type="text" class="col-7" placeholder="Enter your email....">
+                                <button type="submit" class="col-5" id="btn_footer">Subscribe</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- ========== End Section footer ========== -->
+        <!-- ==========/////////// creator  \\\\\\========== -->
+        <section id="creator">
+            <div class="container">
+                <p>© 2022 All Rights Reserved <span>Aytor</span>  By <span>Ashfat.</span> </p>
+            </div>
+        </section>
+
+        
     <!-- jquery link src  -->
     <script src="./assets/vandor/js/jquery-3.7.1.min.js"></script>
     <!-- bootstrap js link -->
     <script src="./assets/vandor/js/bootstrap.bundle.min.js"></script>
+    <!-- slick js link  -->
+    <script src="./assets/vandor/js/slick.min.js"></script>
     <!-- main script link  -->
     <script src="./assets/js/script.js"></script>
     <!-- main jquery src link  -->

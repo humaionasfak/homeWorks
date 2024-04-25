@@ -6,6 +6,10 @@
 /*<========= header section start ===========>*/
 /*<=========navbar start===========>*/
 @media screen and (max-width:1118px) {
+    header  #navbar  {
+        padding: 18px 0;
+        overflow: visible;
+    }
      #navbar .list{
         position: fixed;
         top: 0;
@@ -16,7 +20,7 @@
         transition: 0.5s;
         opacity: 0;
         visibility: hidden;
-        z-index: 999;
+        z-index: 999999;
     }
      #navbar .list.open{
         opacity: 1;

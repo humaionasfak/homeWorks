@@ -1328,7 +1328,7 @@ header .navbar-src.fixed  {
 #footer section start
 ===============================>*/
 footer{
-    overflow: hidden;
+    /* overflow: hidden; */
     background: var(--hover-color);
     padding-bottom: 70px;
     margin-top: 50px;

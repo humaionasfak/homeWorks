@@ -113,6 +113,7 @@ h1,h2, h3 , h4, h5, h6 ,a, button{
 ===============================>*/
 header  #navbar  {
     padding: 18px 0;
+    overflow: hidden;
 }
 header .navbar-src.fixed  {
     position: fixed;
@@ -125,6 +126,9 @@ header .navbar-src.fixed  {
     transform: translateY(100px);
     background: #fff;
     transition: 0.35s;
+}
+#navbar .container{
+    overflow: hidden;
 }
  #navbar .list .img{
     display: none;
@@ -336,6 +340,12 @@ header .navbar-src.fixed  {
 /*===============================>
 #main section start
 ===============================>*/
+#main{
+    overflow: hidden;
+}
+#main .container{
+    overflow: hidden;
+}
 #main  .slide{
     height: 800px;
     background-size: cover;
@@ -408,6 +418,10 @@ header .navbar-src.fixed  {
 ===============================>*/
 #home_page_img_section{
     padding: 42px 0;
+    overflow: hidden;
+}
+#home_page_img_section .container {
+    overflow: hidden;
 }
 #home_page_img_section .container .row .img-one,
 #home_page_img_section .container .row .img-two,
@@ -478,7 +492,11 @@ header .navbar-src.fixed  {
 #product{
     margin-top: 50px;
     margin-bottom: 50px;
+    overflow: hidden;
 
+}
+#product .container{
+    overflow: hidden;
 }
 #product .container h2{
     text-align: center;
@@ -700,6 +718,9 @@ header .navbar-src.fixed  {
     background-size: cover;
     background-position: center;
 }
+#section_four .container{
+    overflow: hidden;
+}
 #section_four::after{
     content: '';
     position: absolute;
@@ -760,6 +781,10 @@ header .navbar-src.fixed  {
 ===============================>*/
 #section_five_product{
     margin-top: 112px;
+    overflow: hidden;
+}
+#section_five_product .container{
+    overflow: hidden;
 }
 #section_five_product .container h2{
     font-weight: 700;
@@ -832,10 +857,13 @@ header .navbar-src.fixed  {
 /* #section_six */
 #section_six {
     margin-top: 68px;
+    overflow: hidden;
 }
+
 #section_six .container_count{
     display: flex;
     justify-content: center;
+    overflow: hidden;
 }
 #section_six .container h3{
     font-weight: 700;
@@ -1008,11 +1036,15 @@ header .navbar-src.fixed  {
 #section seven start
 ===============================>*/
 #section_saven{
+    overflow: hidden;
     margin: 85px 0;
     background-repeat: no-repeat;
     background-size: contain;
     background-color: #F1F3F4;
     background-position: right;
+}
+#section_saven .container{
+    overflow: hidden;
 }
 #section_saven  .row h3{
     font-weight: 400;
@@ -1181,7 +1213,11 @@ header .navbar-src.fixed  {
 #News section start
 ===============================>*/
 #News_section {
+    overflow: hidden;
     padding: 0 0 100px;
+}
+#News_section .container{
+    overflow: hidden;
 }
 #News_section .container  h2{
     font-weight: 700;
@@ -1292,6 +1328,7 @@ header .navbar-src.fixed  {
 #footer section start
 ===============================>*/
 footer{
+    overflow: hidden;
     background: var(--hover-color);
     padding-bottom: 70px;
     margin-top: 50px;

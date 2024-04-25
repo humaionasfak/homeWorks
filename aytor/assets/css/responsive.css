@@ -169,6 +169,9 @@
         border: none;
         
     }
+    #section_six .container .row .offer_banner{
+        padding: 20px;
+    }
 }
 /*===============================>
 #responsive part end

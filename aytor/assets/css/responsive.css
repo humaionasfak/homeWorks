@@ -133,6 +133,11 @@
         flex-direction: column-reverse;
     }
 }
+/*<========= footer ===========>*/
+footer .container .footer_header_section{
+    position: initial;
+    margin: auto;
+}
 /*<=========navbar end ===========>*/
 /*<========= img section start ===========>*/
 @media screen and (max-width: 980px) {

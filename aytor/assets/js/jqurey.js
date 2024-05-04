@@ -130,3 +130,100 @@ $(".news_slider").slick({
     },
   ],
 });
+
+// home page end
+
+// about page start
+$(".about-slider-one").slick({
+  dots: false,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 4,
+  slidesToScroll: 2,
+  prevArrow: ".prev-arrow",
+  nextArrow: ".next-arrow",
+  autoplay: true,
+  autoplaySpeed: 2000,
+
+  responsive: [
+    {
+      breakpoint: 1199,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: false,
+      },
+    },
+    {
+      breakpoint: 920,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+      },
+    },
+    {
+      breakpoint: 580,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+  ],
+});
+// customer slider
+$(".customar-slider").slick({
+  dots: true,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 1,
+  fade: true,
+  prevArrow: false,
+  nextArrow: false,
+  dotsClass: "container aboutPage-slick-dod",
+  autoplay: true,
+  autoplaySpeed: 3000,
+});
+// user slider
+$(".user-slider").slick({
+  dots: true,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 6,
+  slidesToScroll: 2,
+  prevArrow: false,
+  nextArrow: false,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  dotsClass: "container aboutPage-slick-dod",
+  lazyLoad: "ondemand",
+  responsive: [
+    {
+      breakpoint: 1270,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 2,
+        infinite: true,
+        dots: true,
+      },
+    },
+    {
+      breakpoint: 920,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 2,
+        infinite: true,
+        dots: true,
+      },
+    },
+    {
+      breakpoint: 780,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        dots: true,
+      },
+    },
+  ],
+});
+// about page end

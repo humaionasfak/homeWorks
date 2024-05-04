@@ -120,7 +120,7 @@ header .navbar-src.fixed  {
     width: 100%;
     top: -100px;
     left: 0;
-    z-index: 9999999;
+    z-index: 999;
     /* left: 50%; */
     /* transform: translateX(-50%); */
     transform: translateY(100px);
@@ -167,6 +167,7 @@ header .navbar-src.fixed  {
 }
 #navbar .list .link .first-drop-down:hover .dorp_down{
     /* display: block; */
+    z-index: 999999;
     top: 125px;
     opacity: 1;
     visibility: visible;
@@ -271,7 +272,7 @@ header .navbar-src.fixed  {
     height: 100%;
     background: rgba(0, 0, 0, 0.904);
     position: fixed;
-    z-index: 99999;
+    z-index: 999999;
     top: 0;
     transform: scale(0);
     left: 0;
@@ -508,7 +509,7 @@ header .navbar-src.fixed  {
     margin-bottom: 24px;
 }
 #product .container .row .product_card{
-    width:312px ;
+    width:3120px ;
     padding: 0;
     overflow: hidden;
     border-radius: 0;
@@ -955,6 +956,7 @@ header .navbar-src.fixed  {
 }
 #section_six .container .row .offer_banner .offer_banner_text{
     width: 70%;
+    max-width: 100%;
     height: 80%;
     padding: 20px 0 0;
 }
@@ -1327,32 +1329,33 @@ header .navbar-src.fixed  {
 /*===============================>
 #footer section start
 ===============================>*/
-footer{
+#home-page-footer{
     /* overflow: hidden; */
     background: var(--hover-color);
     padding-bottom: 70px;
     margin-top: 50px;
 }
-footer .container {
+.footer-all-page{
+    background: var();
+}
+ .container {
     
     position: relative;
 }
 
-footer .container .footer_header_section{
+#home-page-footer .container .footer_header_section{
     background: var(--comon-colot);
     padding: 0px 45px 38px 45px;
-    /* gap: 10px; */
-    position: absolute;
     top: -85px;
     width: 100%;
     box-shadow: 0 0 8px #00000056;
 }
 
-footer .container .footer_header_section .child{
+#home-page-footer .container .footer_header_section .child{
     border-right: 4px solid #6665659c
     
 }
-footer .f_icon{
+#home-page-footer .f_icon{
     width: 70px;
     height: 70px;
     background: var(--1st-primary-light);
@@ -1360,28 +1363,28 @@ footer .f_icon{
     line-height: 70px;
     border-radius: 50%;
 }
-footer .f-text h3{
+#home-page-footer .f-text h3{
     font-weight: 600;
     font-size: 20px;
     line-height: 150%;
     color: var(--text-color);
 }
-footer .f-text p{
+#home-page-footer .f-text p{
     font-weight: 400;
     font-size: 15px;
     line-height: 175%;
     color: var(--paragraph-color);
 
 }
-footer .f-text p span{
+#home-page-footer .f-text p span{
     color: var(--1st-primary-light);
 }
-footer .footer_center_section{
+#home-page-footer .footer_center_section{
     padding: 75px 0;
     border-bottom: 1px solid var(--comon-colot);
 
 }
-footer .container .card_one .icon{
+#home-page-footer .container .card_one .icon{
     width: 40px;
     height: 40px;
     background: var(--comon-colot);
@@ -1391,7 +1394,7 @@ footer .container .card_one .icon{
     font-size: 20px;
     transition: 0.5s;
 }
-footer .container .card_one .icon:hover{
+#home-page-footer .container .card_one .icon:hover{
     color: #fff;
     background: var(--1st-primary-light);
 }

@@ -5,7 +5,7 @@
 
 /*<========= header section start ===========>*/
 /*<=========navbar start===========>*/
-@media screen and (max-width:1118px) {
+@media screen and (max-width:1199px) {
     header  #navbar  {
         padding: 18px 0;
         overflow: visible;
@@ -136,6 +136,22 @@
         position: initial;
         margin: auto;
     }
+    /*<=========  about page section four ===========>*/
+
+
+    #about-section-four .img-half{
+        position: relative;
+        right: 0;
+        width: 100%;
+        height: 100%;
+    }
+    #about-section-four .header-text{
+        margin-top: 55px;
+    }
+    #about-section-four .container .row .content{
+        width: 100%;
+    }
+    
 }
 /*<========= footer ===========>*/
 /*<=========navbar end ===========>*/
@@ -181,7 +197,44 @@
     #section_six .container .row .offer_banner{
         padding: 20px;
     }
+    /*<========= about page ===========>*/
+    #about-section-six .container  .prev-arrow{
+        display: none;
+    }
+    #about-section-six .container  .next-arrow{
+        display: none;
+    }
 }
+/*===============================>
+#about page section start
+===============================>*/
+/*<========= about shop page start ===========>*/
+@media  screen and (max-width: 980px){
+    #about-shop-section .container{
+        background: url(../img/BG.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: right;
+        padding:  0;
+    }
+    /*<========= about page ===========>*/
+    #about-section-saven .container .pop{
+        display: none;
+    }
+}
+@media  screen and (max-width: 1220px) {
+    #about-shop-section .container .row .right {
+        padding: 0 50px;
+    }
+    #about-shop-section .container .row .ani{
+        display: none;
+    }
+}
+/*<========= about shop page end ===========>*/
+
+/*===============================>
+#about page section end
+===============================>*/
 /*===============================>
 #responsive part end
 ===============================>*/

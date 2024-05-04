@@ -7,9 +7,11 @@ const nav_list = document.querySelector(".nav_list");
 const searchSection = document.querySelector(".overlab");
 const searchContainer = document.querySelector(".search_section");
 const searchFieldClose = document.querySelector(".search_section_close_btn");
+const input = document.querySelector(".input");
 searchSection.addEventListener("click", (e) => {
   e.preventDefault();
   searchContainer.classList.add("open_search");
+  input.classList.add("input-open");
 });
 searchFieldClose.addEventListener("click", (e) => {
   searchContainer.classList.remove("open_search");
@@ -40,12 +42,12 @@ list.addEventListener("click", navCloseFun);
 //? navbar section end
 
 // section six time counter
-const days = document.querySelector("#day");
-const hour = document.querySelector("#hour");
-const minute = document.querySelector("#minute");
-const second = document.querySelector("#sec");
 
 let countDown = () => {
+  const days = document.querySelector("#day");
+  const hour = document.querySelector("#hour");
+  const minute = document.querySelector("#minute");
+  const second = document.querySelector("#sec");
   let futureDate = new Date("31 April 2024");
   let currentDate = new Date();
   let myDate = futureDate - currentDate;
@@ -53,13 +55,16 @@ let countDown = () => {
   let hours = Math.abs(Math.floor(myDate / 1000 / 60 / 60) % 24);
   let minutes = Math.abs(Math.floor(myDate / 1000 / 60) % 60);
   let seconds = Math.abs(Math.floor(myDate / 1000) % 60);
-  days.innerHTML = day;
-  hour.innerHTML = hours;
-  minute.innerHTML = minutes;
-  second.innerHTML = seconds;
+
+  try {
+    days.innerHTML = day;
+    hour.innerHTML = hours;
+    minute.innerHTML = minutes;
+    second.innerHTML = seconds;
+  } catch {}
 };
 countDown();
-setInterval(countDown, 1000);
+setInterval(countDown, 100);
 
 // upper button
 const upperButton = document.querySelector(".upper_btn");
@@ -70,3 +75,41 @@ window.addEventListener("scroll", function (e) {
     upperButton.classList.remove("up_active");
   }
 });
+
+//about page start
+let SeNumber = document.querySelectorAll(".section-num");
+let valueOf = 10;
+SeNumber.forEach((element) => {
+  function formatNumber(num, precision = 2) {
+    const map = [
+      { suffix: "T", threshold: 1e12 },
+      { suffix: "B", threshold: 1e9 },
+      { suffix: "M", threshold: 1e6 },
+      { suffix: "K", threshold: 1e3 },
+      { suffix: "", threshold: 1 },
+    ];
+
+    const found = map.find((x) => Math.abs(num) >= x.threshold);
+    if (found) {
+      const formatted =
+        (num / found.threshold).toFixed(precision) + found.suffix;
+      return formatted;
+    }
+
+    return num.toFixed();
+  }
+  let startValue = 0;
+  let endValue = parseInt(element.getAttribute("data-val"));
+  console.log(endValue);
+  let duration = Math.floor(valueOf / endValue);
+  let count = setInterval(function () {
+    startValue += 1;
+    if (startValue / 1000) {
+      element.innerHTML = formatNumber(startValue);
+    }
+    if (startValue == endValue) {
+      clearInterval(count);
+    }
+  }, duration);
+});
+//about page end

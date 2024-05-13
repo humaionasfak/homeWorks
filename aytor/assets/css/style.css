@@ -158,7 +158,7 @@ header .navbar-src.fixed  {
     z-index: 99;
     padding: 20px 30px 20px;
     width: 200px;
-    left: 450px;
+    /* left: 450px; */
     top: 255px;
     /* display: none; */
     transition: 0.5s;

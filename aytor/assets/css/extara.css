@@ -30,6 +30,21 @@ h1,h2, h3 , h4, h5, h6 ,a, button{
     line-height: 128%;
     color: var(--text-color);
 }
+.common-header{
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 121%;
+    text-align: center;
+    color: var(--comon-colot);
+    margin-bottom: 16px;
+}
+.common-pera{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 175%;
+    text-align: center;
+    color: var(--comon-colot);
+}
 /*<========= common css end ===========>*/
 
 
@@ -372,7 +387,6 @@ h1,h2, h3 , h4, h5, h6 ,a, button{
     height: 280px;
     width: 100%;
     overflow: hidden;
-    background: red;
 }
 #about-section-six .container .row .img img{
     width: 100%;
@@ -655,6 +669,300 @@ h1,h2, h3 , h4, h5, h6 ,a, button{
 }
 /*===============================>
 #about section aytor end
+===============================>*/
+
+
+
+/*===============================>
+#shop-grid section start
+===============================>*/
+#shop-banner{
+    background: url(../img/breadcumb_bg_shop.jpg);
+    /* width: 100%; */
+    width: 100vw;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    isolation: isolate;
+}
+#shop-banner::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.596);
+
+}
+#shop-banner .container {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    place-items: center;
+}
+/*===============================>
+#shop-grid section shop product section start
+===============================>*/
+#shop-product{
+    margin-top: 100px;
+}
+#shop-product .container .btn-one,
+#shop-product .container .btn-two{
+    border: none;
+    font-size:22px ;
+    padding: 5px 8px;
+    color: var(--comon-colot);
+    margin: 0;
+    cursor: pointer;
+}
+
+#shop-product .container .btn-one{
+    background: var(--1st-primary-light);
+}
+#shop-product .container .btn-two{
+    background: var(--hover-color);
+}
+#shop-product .container .start p{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 162%;
+    text-align: center;
+    color: var(--paragraph-color);
+    position: relative;
+}
+#shop-product .container .start .content {
+    margin-left: 30px;
+    width: fit-content;
+}
+#shop-product .container .start .content .out-line{
+    width: 100%;
+    height: 3px;
+    background: var(--bg);
+}
+#shop-product .container .start .content .inline{
+    width:0;
+    background: var(--text-color);
+    height: 3px;
+    transition: 1s;
+}
+#shop-product .container select{
+    background: var(--bg);
+    border: none;
+    padding: 8px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 162%;
+    text-align: center;
+    color: var(--paragraph-color);
+    margin-left: 30px
+    
+}
+#shop-product .container .main-row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+#shop-product .container .main-row .shop-list-card{
+    width: 300px;
+    padding: 0;
+    margin-top: 30px;
+    overflow: hidden;
+
+}
+#shop-product .container .main-row .shop-list-card .img{
+    height: 360px;
+    overflow: hidden;
+}
+#shop-product .container .main-row .shop-list-card img{
+    width: 100%;
+    height: 100%;
+
+    transition: 0.5s;
+}
+#shop-product .container .main-row .shop-list-card:hover img{
+    transform: scale(1.2);
+}
+#shop-product .container .main-row .shop-list-card .content.abcd{
+    background: red;
+}
+#shop-product .container .main-row .shop-list-card .content h4{
+    font-family: var(--font-family);
+    line-height: 156%;
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--text-color);
+}
+#shop-product .container .main-row .shop-list-card .content p{
+    color: var(--text-color);
+    font-size: 18px;
+    font-weight: 600;
+}
+#shop-product .container .main-row .shop-list-card .content p span{
+    color: var(--1st-primary-light);
+    font-size: 16px;
+}
+#shop-product .container .main-row .shop-list-card h5{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 162%;
+    color: var(--paragraph-color);
+    margin-top: 8px
+}
+#shop-product .container .main-row .shop-list-card .tag{
+    top: 0;
+}
+#shop-product .container .main-row .shop-list-card .tag p{
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 162%;
+    color: var(--comon-colot);
+    background-color: var(--1st-primary-light);
+    padding: 0 23px;
+}
+#shop-product .container .main-row .shop-list-card .icon-center{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 100%;
+    background: red;
+}
+#shop-product .container .main-row .shop-list-card .icon-center .child-icon{
+    position: absolute;
+    background: var(--text-color);
+    color: var(--comon-colot);
+    width: 36px;
+    height: 36px;
+    text-align: center;
+    line-height: 36px;
+    border-radius: 50% ;
+    transition: 0.5s ease;
+}
+
+/* #shop-product .container .main-row .shop-list-card .icon-center .child-icon:hover{
+    right: 20px;
+} */
+#shop-product .container .main-row .shop-list-card .icon-center .child-icon:hover{
+    background: var(--1st-primary-light);
+}
+#shop-product .container .main-row .shop-list-card .icon-center .icon-1{
+    right: -80px;
+    opacity: 0;
+}
+#shop-product .container .main-row .shop-list-card:hover .icon-center .icon-1{
+    right: 0;
+    opacity: 1;
+}
+#shop-product .container .main-row .shop-list-card .icon-center .icon-2{
+    right: -80px;
+    top: 42px;
+    opacity: 0;
+    transition-delay: 0.2s;
+}
+#shop-product .container .main-row .shop-list-card:hover .icon-center .icon-2{
+    right: 0;
+    opacity: 1;
+}
+#shop-product .container .main-row .shop-list-card .icon-center .icon-3{
+    right: -80px;
+    top: 85px;
+    opacity: 0;
+    transition-delay: 0.3s;
+}
+#shop-product .container .main-row .shop-list-card:hover .icon-center .icon-3{
+    right: 0;
+    opacity: 1;
+}
+#shop-product .container .main-row .shop-list-card .icon-center .icon-4{
+    opacity: 0;
+    right: -80px;
+    top: 130px;
+    transition-delay: 0.4s;
+
+}
+#shop-product .container .main-row .shop-list-card:hover .icon-center .icon-4{
+    right: 0;
+    opacity: 1;
+}
+#shop-product .container .btn-lenght{
+    padding: 0 13px;
+    font-size: 18px;
+    border-color: #00000046;
+    background: transparent;
+    font-weight: bold;
+    transition: 0.35s;
+}
+#shop-product .container .btn-lenght:hover{
+    background-color: var(--hover-color);
+    color: #fff;
+}
+#shop-product .container .btn-prev,
+#shop-product .container .btn-next{
+    border: none;
+    background-color: transparent;
+    font-size: 18px;
+}
+/*===============================>
+#shop-grid section shop product section end
+===============================>*/
+/*===============================>
+#shop detains section start
+===============================>*/
+#banner-shop-details{
+    width: 100vw;
+    height: 400px;
+    background: url(../img/breadcumb_bg_shop_details.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    background-position: center;
+    position: relative;
+    isolation: isolate;
+}
+#banner-shop-details::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #0000006c;
+    width: 100%;
+    height: 100%;
+}
+#select-product-section .container .small-img-grop{
+    display: flex;
+    justify-content: center;
+}
+#select-product-section .container .small-img-col{
+    cursor: pointer;
+}
+#select-product-section .container .left-arrow,
+#select-product-section .container .right-arrow{
+    position: absolute;
+    transform: translate(-50% ,-50%);
+    top: 50%;
+    background-color: rgba(10, 8, 8, 0.493);
+    padding: 0 3px;
+    color: #fff;
+}
+#select-product-section .container .left-arrow{
+    left: 0;
+}
+#select-product-section .container .right-arrow{
+    right: -15px;
+}
+/*===============================>
+#shop detains section end
+===============================>*/
+
+/*===============================>
+#shop-grid section end
 ===============================>*/
 /*===============================>
 #footer section start

@@ -1,4 +1,5 @@
 // navbar section start
+"use strict";
 const mainNav = document.querySelector(".navbar-src");
 const menu = document.querySelector(".menu");
 const list = document.querySelector(".list");
@@ -13,7 +14,8 @@ searchSection.addEventListener("click", (e) => {
   searchContainer.classList.add("open_search");
   input.classList.add("input-open");
 });
-searchFieldClose.addEventListener("click", (e) => {
+
+searchFieldClose.addEventListener("click", () => {
   searchContainer.classList.remove("open_search");
 });
 window.addEventListener("scroll", () => {
@@ -40,6 +42,7 @@ const navCloseFun = (e) => {
 close_btn.addEventListener("click", navCloseFun);
 list.addEventListener("click", navCloseFun);
 //? navbar section end
+// navbar section end
 
 // section six time counter
 
@@ -65,6 +68,7 @@ let countDown = () => {
 };
 countDown();
 setInterval(countDown, 100);
+// section six end
 
 // upper button
 const upperButton = document.querySelector(".upper_btn");
@@ -113,3 +117,36 @@ SeNumber.forEach((element) => {
   }, duration);
 });
 //about page end
+
+// shop page start
+// shop-grid small progress bar start
+let element = document.querySelector(".inline");
+let width = 60;
+let count = 0;
+window.addEventListener(
+  "DOMContentLoaded",
+  (move = () => {
+    if (count === 0) {
+      j = 1;
+      let main = setInterval(frame, 50);
+      function frame() {
+        if (width >= 80) {
+          clearInterval(main);
+        } else {
+          element.style.width = width + "%";
+          element.style.innerHTML = width + "%";
+        }
+      }
+    }
+  })
+);
+// shop details page start
+const mainImgProduct = document.getElementById("main-img");
+const smImg = document.querySelectorAll(".small-img");
+console.log(smImg);
+smImg.forEach((elm) => {
+  console.log(elm);
+  elm.addEventListener("click", () => {
+    mainImgProduct.src = elm.src;
+  });
+});

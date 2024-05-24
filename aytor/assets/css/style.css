@@ -333,6 +333,75 @@ header .navbar-src.fixed  {
 .search_section .input .search_section_close_btn:hover i {
     transform: rotate(90deg);
 }
+.offcanvas .offcanvas-header button{
+    border: 1px solid var(--hover-color);
+    border-radius: 50%;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 50px;
+    top: 20px;
+}
+.offcanvas .offcanvas-body .offcanvas-img{
+    padding: 20px 0;
+    border-top: 1px solid var(--bg);
+    border-bottom:1px solid var(--bg) ;
+}
+.offcanvas .offcanvas-body h5{
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--text-color);
+}
+.offcanvas .offcanvas-body h3{
+    font-size: 18px;
+    color: var(--text-color);
+    transition: 0.35s;
+}
+.offcanvas .offcanvas-body p{
+    font-size: 15px;
+    color: var(--1st-primary-light);
+}
+.offcanvas .offcanvas-body h3:hover{
+    color: var(--1st-primary-light);
+}
+.offcanvas .offcanvas-body .img-of{
+    width: 80px;
+    height: 80px;
+    border: 1px solid #11161e3a;
+    display: inline-block;
+
+}
+.offcanvas .offcanvas-body .img-of img{
+    width: 100%;
+    height: 100%;
+}
+.offcanvas .offcanvas-body i{
+    color: var(--text-color);
+    font-size: 20px;
+    cursor: pointer;
+}
+.offcanvas .offcanvas-body h4{
+    color: var(--text-color);
+    font-size: 20px;
+    font-weight: 700;
+}
+.offcanvas .offcanvas-body h6{
+    color: var(--text-color);
+    font-size: 23px;
+    font-weight: 400;
+}
+.offcanvas .offcanvas-body .off-can-btn{
+    background-color: var(--1st-primary-light);
+    padding: 10px 30px;
+    color: var(--comon-colot);
+    font-size: 18px;
+    border: none;
+    margin-top: 20px;
+    transition: 0.35s;
+}
+.offcanvas .offcanvas-body .off-can-btn:hover{
+    background-color: var(--hover-color);
+}
 /*<========= search and offcanvas end ===========>*/
 /*===============================>
 #navbar end
@@ -360,18 +429,55 @@ header .navbar-src.fixed  {
     font-size: 18px;
     line-height: 156%;
     color: #1d1d1d;
+    animation-name: h5Ani;
+    animation-duration: 0.6s;
+}
+@keyframes h5Ani {
+    0%{
+        transform: translateY(-200px);
+        opacity: 0;
+    }    
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
 }
 #main .banner_slider .slide .container .content h1{
     font-weight: 700;
     font-size: 64px;
     line-height: 116%;
-    color: #1d1d1d
+    color: #1d1d1d;
+    animation-name: h1Ani;
+    animation-duration: 0.6s;
+    animation-fill-mode: forwards;
+}
+@keyframes h1Ani {
+    0%{
+        transform: translateX(200px);
+        opacity: 0;
+    }    
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
 }
 #main .banner_slider .slide .container .content p{
     font-weight: 400;
     font-size: 16px;
     line-height: 175%;
     color: #1d1d1d;
+    animation-name: pAni;
+    animation-duration: 0.6s;
+}
+@keyframes pAni {
+    0%{
+        transform: translateY(200px);
+        opacity: 0;
+    }    
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
 }
 #main .banner_slider .slide .container .content a{
     font-weight: 600;
@@ -387,12 +493,13 @@ header .navbar-src.fixed  {
 .bannerDots{
     position: absolute;
     top: 68%;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 10%;
+    transform: translateY(-50%);
 }
 .bannerDots li {
 
     display: inline-block;
+
 }
 .bannerDots li button {
     width: 10px;
@@ -977,7 +1084,7 @@ header .navbar-src.fixed  {
     font-weight: 400;
     font-size: clamp(13px , 1.5vw , 16px);
     line-height: 175%;
-    color: var(--paragraph-color);
+    /* color: var(--paragraph-color); */
 }
 #section_six .container .row .offer_banner .offer_banner_text .price{
     font-weight: 600;
@@ -1011,7 +1118,7 @@ header .navbar-src.fixed  {
 .slick-dod{
     position: absolute;
     bottom: -50px;
-    left: 50%;
+    left: 40px;
     width: fit-content;
     transform: translateX(-50%);
 }
@@ -1339,7 +1446,6 @@ header .navbar-src.fixed  {
     background: var();
 }
  .container {
-    
     position: relative;
 }
 
@@ -1349,8 +1455,20 @@ header .navbar-src.fixed  {
     top: -85px;
     width: 100%;
     box-shadow: 0 0 8px #00000056;
+    position: absolute;
+    left: 0;
 }
 
+@media screen and (max-width:1000px){
+    #home-page-footer .container .footer_header_section{
+        background: var(--comon-colot);
+        padding: 0px 45px 38px 45px;
+        top: -85px;
+        width: 100%;
+        box-shadow: 0 0 8px #00000056;
+        position: static;
+    }
+}
 #home-page-footer .container .footer_header_section .child{
     border-right: 4px solid #6665659c
     

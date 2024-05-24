@@ -41,8 +41,29 @@ const navCloseFun = (e) => {
 };
 close_btn.addEventListener("click", navCloseFun);
 list.addEventListener("click", navCloseFun);
+
+// const clickebelIcon = document.querySelector(".icon-click");
+// const dropDown = document.querySelector(".dorp_down");
+// const removeDrop = document.querySelector(".removed");
+
+// clickebelIcon.addEventListener("click", (e) => {
+//   clickebelIcon.classList.add("removed");
+//   dropDown.classList.add("open-drop-down");
+// });
+// function rem() {
+//   dropDown.classList.remove("open-drop-down");
+// }
+// if (removeDrop !== null) {
+//   removeDrop.addEventListener("click", rem);
+// }
 //? navbar section end
 // navbar section end
+
+// open html file;
+// const btnOpen = document.querySelector(".btn1");
+// btnOpen.addEventListener("click", function () {
+//   console.log("hello world");
+// });
 
 // section six time counter
 
@@ -79,42 +100,24 @@ window.addEventListener("scroll", function (e) {
     upperButton.classList.remove("up_active");
   }
 });
-
 //about page start
 let SeNumber = document.querySelectorAll(".section-num");
-let valueOf = 10;
-SeNumber.forEach((element) => {
-  function formatNumber(num, precision = 2) {
-    const map = [
-      { suffix: "T", threshold: 1e12 },
-      { suffix: "B", threshold: 1e9 },
-      { suffix: "M", threshold: 1e6 },
-      { suffix: "K", threshold: 1e3 },
-      { suffix: "", threshold: 1 },
-    ];
-
-    const found = map.find((x) => Math.abs(num) >= x.threshold);
-    if (found) {
-      const formatted =
-        (num / found.threshold).toFixed(precision) + found.suffix;
-      return formatted;
+SeNumber.forEach((counter) => {
+  let initialValue = 0;
+  let initialCount = counter.dataset.count;
+  console.log(initialCount);
+  const clearData = setInterval(updateCounting, 1);
+  function updateCounting() {
+    initialValue = initialValue + 5;
+    counter.innerText = initialValue;
+    if (initialValue > 1000) {
+      initialValue = initialValue + 100;
+      counter.innerText = (initialValue / 1000).toFixed(1) + "k+";
     }
-
-    return num.toFixed();
+    if (initialValue >= initialCount) {
+      clearInterval(clearData);
+    }
   }
-  let startValue = 0;
-  let endValue = parseInt(element.getAttribute("data-val"));
-  console.log(endValue);
-  let duration = Math.floor(valueOf / endValue);
-  let count = setInterval(function () {
-    startValue += 1;
-    if (startValue / 1000) {
-      element.innerHTML = formatNumber(startValue);
-    }
-    if (startValue == endValue) {
-      clearInterval(count);
-    }
-  }, duration);
 });
 //about page end
 
@@ -123,30 +126,88 @@ SeNumber.forEach((element) => {
 let element = document.querySelector(".inline");
 let width = 60;
 let count = 0;
-window.addEventListener(
-  "DOMContentLoaded",
-  (move = () => {
-    if (count === 0) {
-      j = 1;
+let j;
+// let move;
+window.addEventListener("DOMContentLoaded", () => {
+  if (count === 0) {
+    j = 1;
+    if (element !== null) {
       let main = setInterval(frame, 50);
       function frame() {
-        if (width >= 80) {
-          clearInterval(main);
-        } else {
-          element.style.width = width + "%";
-          element.style.innerHTML = width + "%";
-        }
+        element.style.width = width + "%";
+        element.style.innerHTML = width + "%";
       }
     }
-  })
-);
+  }
+});
 // shop details page start
 const mainImgProduct = document.getElementById("main-img");
 const smImg = document.querySelectorAll(".small-img");
-console.log(smImg);
 smImg.forEach((elm) => {
-  console.log(elm);
   elm.addEventListener("click", () => {
     mainImgProduct.src = elm.src;
   });
 });
+// shop details increment and decrement value
+let increment = document.querySelector(".increment-value");
+let decrement = document.querySelector(".decrement-value");
+let valueOfIncrementDecrement = document.querySelector(".value-in");
+if (increment !== null || decrement !== null) {
+  increment.addEventListener("click", function () {
+    valueOfIncrementDecrement.value++;
+  });
+}
+if (decrement !== null) {
+  decrement.addEventListener("click", function () {
+    if (valueOfIncrementDecrement.value > 1) {
+      valueOfIncrementDecrement.value--;
+    }
+  });
+}
+
+// main page section start
+// const mainPage = document.querySelectorAll(".main-nav");
+const mainPageOne = document.querySelector(".main-nav-one");
+const mainPageThree = document.querySelector(".main-nav-three");
+const mainPageTow = document.querySelector(".main-nav-two");
+const PageOne = document.querySelector(".page-one");
+const pageTwo = document.querySelector(".page-tow");
+const pageThree = document.querySelector(".page-three");
+
+function addRemoved(e) {
+  if (e.target.classList.contains("main-nav-two")) {
+    PageOne.classList.add("d-none");
+    pageTwo.classList.add("block");
+    pageTwo.classList.remove("d-none");
+    pageThree.classList.add("d-none");
+    mainPageTow.classList.add("clr2");
+    mainPageOne.classList.remove("clr");
+    mainPageThree.classList.remove("solid-color");
+  } else if (e.target.classList.contains("main-nav-one")) {
+    PageOne.classList.add("d-block");
+    PageOne.classList.remove("d-none");
+    pageTwo.classList.remove("block");
+    pageThree.classList.add("d-none");
+    pageTwo.classList.add("d-none");
+    mainPageOne.classList.add("clr");
+    mainPageTow.classList.remove("clr2");
+    mainPageThree.classList.remove("solid-color");
+  }
+  if (e.target.classList.contains("main-nav-three")) {
+    PageOne.classList.add("d-none");
+    pageTwo.classList.remove("block");
+    pageTwo.classList.add("d-none");
+    pageThree.classList.add("d-block");
+    pageThree.classList.remove("d-none");
+    mainPageThree.classList.add("solid-color");
+    mainPageOne.classList.remove("clr");
+    mainPageTow.classList.remove("clr2");
+  }
+}
+if (mainPageOne !== null) {
+  mainPageOne.addEventListener("click", addRemoved);
+}
+mainPageTow.addEventListener("click", addRemoved);
+mainPageThree.addEventListener("click", addRemoved);
+
+// compare page

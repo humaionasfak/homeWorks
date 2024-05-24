@@ -6,7 +6,7 @@ $(function () {
     dots: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    dotsClass: "bannerDots container",
+    dotsClass: "bannerDots ",
     fade: true,
     cssEase: "linear",
     autoplay: true,
@@ -250,7 +250,7 @@ $(".small-img-grop").slick({
         slidesToShow: 3,
         slidesToScroll: 3,
         infinite: true,
-        dots: true,
+        dots: false,
       },
     },
     {
@@ -273,3 +273,63 @@ $(".small-img-grop").slick({
   ],
 });
 // shop page end
+
+// related product section start
+$(".related-product-slider").slick({
+  dots: false,
+  infinite: false,
+  speed: 300,
+  prevArrow: ".left-arrow",
+  nextArrow: ".right-arrow",
+  slidesToShow: 4,
+  slidesToScroll: 2,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  cssEase: "linear",
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: false,
+      },
+    },
+    {
+      breakpoint: 920,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+      },
+    },
+    {
+      breakpoint: 580,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ],
+});
+// custom scroll bar
+$(function () {
+  $(".table").mCustomScrollbar({
+    theme: "rounded-dots-dark",
+  });
+});
+
+// blog section start
+
+$(".blog-sider").slick({
+  infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  prevArrow: ".left-arrow",
+  nextArrow: ".right-arrow",
+  autoplay: true,
+  autoplaySpeed: 4000,
+});

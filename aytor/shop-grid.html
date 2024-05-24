@@ -96,39 +96,37 @@
                                     <li class="link_item first-drop-down">
                                         <a href="./index.html" >
                                         Home
-                                        <i class="fa-solid fa-chevron-down"></i>
                                      </a>
-                                     <div class="dorp_down">
-                                        <ul>
-                                            <li><a href="#">home</a></li>
-                                            <li><a href="#">home</a></li>
-                                            <li><a href="#">home</a></li>
-                                            <li><a href="#">home</a></li>
-                                        </ul>
-                                     </div>
                                 </li>
                                     <li class="link_item"><a href="./about.html" >
                                         About
                                     </a></li>
-                                    <li class="link_item"><a href="#">
+                                    <li class="link_item"><a href="./page.html">
                                         Pages
-                                        <i class="fa-solid fa-chevron-down"></i>
                                     </a></li>
-                                    <li class="link_item first-drop-down"><a href="#" class="active">
-                                        Shop
-                                        <i class="fa-solid fa-chevron-down"></i>
-                                    </a>
+                                    <li class="link_item first-drop-down">
+                                        <div class="click-icon">
+                                            <a href="./shop-grid.html" class="active">
+                                                Shop
+                                            </a>
+                                            <i class="fa-solid fa-chevron-down"></i>
+                                        </div>
                                     <div class="dorp_down">
                                         <ul>
-                                            <li><a href="./shop-details.html">Shop Details</a></li>
+                                            <ul>
+                                                <li><a href="./shop-details.html">Shop Details</a></li>
+                                                <li><a href="./compre.html">Compare</a></li>
+                                                <li><a href="./cart.html">Cart</a></li>
+                                                <li><a href="./checjout.html">Checkout</a></li>
+                                                <li><a href="./Wishlist.html">Wishlist</a></li>
+                                            </ul>
                                         </ul>
                                      </div>
                                 </li>
-                                    <li class="link_item"><a href="#">
+                                    <li class="link_item"><a href="./blog.html">
                                         Blogs
-                                        <i class="fa-solid fa-chevron-down"></i>
                                     </a></li>
-                                    <li class="link_item"><a href="#">
+                                    <li class="link_item"><a href="./contect.html">
                                         Contact
                                     </a></li>
                                 </ul>
@@ -196,15 +194,68 @@
                 </nav>
                 <!-- ==========/////////// navbar end \\\\\\========== -->
     <!-- ========== offcanvas Section ========== -->
-                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel"  >
-                <div class="offcanvas-header">
-                 <h5 id="offcanvasRightLabel">Shopping cart</h5>
-             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-                <div class="offcanvas-body">
-        ...
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel"  >
+        <div class="offcanvas-header">
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <h5 id="offcanvasRightLabel">Shopping cart</h5>
+            <div class="offcanvas-img d-flex justify-content-between align-items-center">
+                <div class="text d-flex gap-2 align-items-center">
+                    <div class="img-of d-flex">
+                        <img src="./assets/img/cart-img-1-1 (1).jpg" alt="">
+                    </div>
+                    <div class="">
+                        <h3>Jacket hoodies</h3>
+                        <p>1 x $40.00</p>
+                    </div>
                 </div>
+                <i class="fa-solid fa-trash-can"></i>
             </div>
+            <div class="offcanvas-img d-flex justify-content-between align-items-center">
+                <div class="text d-flex gap-2 align-items-center">
+                    <div class="img-of d-flex">
+                        <img src="./assets/img/cart-img-1-2 (1).jpg" alt="">
+                    </div>
+                    <div class="">
+                        <h3>Sport shoes</h3>
+                        <p>1 x $99.00</p>
+                    </div>
+                </div>
+                <i class="fa-solid fa-trash-can"></i>
+            </div>
+            <div class="offcanvas-img d-flex justify-content-between align-items-center">
+                <div class="text d-flex gap-2 align-items-center">
+                    <div class="img-of d-flex">
+                        <img src="./assets/img/cart-img-1-3 (1).jpg" alt="">
+                    </div>
+                    <div class="">
+                        <h3>Smart watch</h3>
+                        <p>1 x $56.00</p>
+                    </div>
+                </div>
+                <i class="fa-solid fa-trash-can"></i>
+            </div>
+            <div class="offcanvas-img d-flex justify-content-between align-items-center">
+                <div class="text d-flex gap-2 align-items-center">
+                    <div class="img-of d-flex">
+                        <img src="./assets/img/cart-img-1-4 (1).jpg" alt="">
+                    </div>
+                    <div class="">
+                        <h3>Bluetooth speaker</h3>
+                        <p>1 x $23.00</p>
+                    </div>
+                </div>
+                <i class="fa-solid fa-trash-can"></i>
+            </div>
+            <div class="d-flex align-items-center gap-2 mt-3">
+                <h4>Subtotal:</h4>
+                <h6>$318.00</h6>
+            </div>
+            <button class="off-can-btn"> View cart</button>
+            <button class="off-can-btn ms-5"> Checkout</button>
+        </div>
+    </div>
     <!-- ========== offcanvas Section end ========== -->
                     <!-- ==========   Nav Bar End ========== -->
             </header>
@@ -226,7 +277,7 @@
                 <div class="container">
                     <div class="content">
                         <h1 class="common-header">Shop - Grid</h1>
-                        <p class="common-pera">Home  /  Shop</p>
+                        <p class="common-pera">Home  /  grid</p>
                     </div>
                 </div>
               </section>
